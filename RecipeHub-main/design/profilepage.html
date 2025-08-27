@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile | RecipeHub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <!-- Wrapper div for styling -->
+  <div class="bg-white min-h-screen flex flex-col">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg flex items-center justify-between px-4 py-3 sm:px-8">
+      <div class="sm:hidden">
+        <button class="text-3xl font-bold text-gray-700">=</button>
+      </div>
+      <div class="hidden sm:block">
+        <img class="w-40" src="assets/images/recipehub logo.jpeg" alt="logo" />
+      </div>
+      <div class="flex-1 flex justify-center px-2">
+        <div class="relative w-full max-w-xs">
+          <input type="text" placeholder="Search" class="w-full pl-10 pr-3 py-1.5 rounded-full bg-purple-100 text-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-300 text-sm" />
+          <svg class="w-4 h-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+        </div>
+      </div>
+      <div class="flex items-center sm:hidden">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User" class="w-8 h-8 rounded-full border-2 border-black" />
+      </div>
+      <div class="hidden sm:flex items-center space-x-32">
+        <a href="#" class="font-bold text-black text-base hover:text-gray-700">Home</a>
+        <a href="#" class="font-bold text-black text-base hover:text-gray-700">Recipes</a>
+        <a href="#" class="font-bold text-black text-base hover:text-gray-700">About</a>
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User" class="w-10 h-10 rounded-full border-2 border-black ml-2">
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-1 w-full max-w-7xl mx-auto px-4 py-8">
+      <div class="flex flex-col md:flex-row min-h-[70vh]">
+
+        <!-- Profile Section -->
+        <section class="md:w-1/2 pr-0 md:pr-8">
+          <header class="flex justify-center items-center mb-4 relative">
+            <h1 class="text-2xl font-bold text-center w-full">Profile</h1>
+            <button class="absolute right-0 bg-orange-500 hover:bg-orange-600 text-white px-4 py-1 rounded text-sm">Edit</button>
+          </header>
+
+          <form class="flex flex-col items-center mb-6">
+            <img src="assets/images/Chef image.jpg" class="w-32 h-32 rounded-full object-cover mb-2" alt="Profile" />
+            <input type="text" placeholder="Full Name" class="border border-gray-300 rounded px-3 py-1 mb-2 w-3/4" />
+            <input type="password" placeholder="Password" class="border border-gray-300 rounded px-3 py-1 mb-2 w-3/4" />
+            <button type="submit" class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-1 rounded text-sm">Change</button>
+          </form>
+
+          <section aria-labelledby="recently-watched">
+            <h2 id="recently-watched" class="text-xl font-semibold text-center mb-2">Recently Watched</h2>
+            <div class="grid grid-cols-4 gap-4 mb-4 px-2">
+              <img src="assets/images/Food1.jpg" class="rounded w-full aspect-square object-cover" />
+              <img src="assets/images/Food2.jpg" class="rounded w-full aspect-square object-cover" />
+              <img src="assets/images/Food 3.jpg" class="rounded w-full aspect-square object-cover" />
+              <img src="assets/images/Food 4.jpg" class="rounded w-full aspect-square object-cover" />
+              <img src="assets/images/food 5.jpg" class="rounded w-full aspect-square object-cover" />
+              <img src="assets/images/Food 6.jpg" class="rounded w-full aspect-square object-cover" />
+              <img src="assets/images/Food 7.jpg" class="rounded w-full aspect-square object-cover" />
+              <img src="assets/images/food 8.jpg" class="rounded w-full aspect-square object-cover" />
+            </div>
+            <div class="flex justify-center">
+              <button class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-1 rounded text-sm">See more</button>
+            </div>
+          </section>
+        </section>
+
+        <!-- Divider -->
+        <div class="w-px bg-gray-300 mx-4 hidden md:block"></div>
+
+        <!-- My Recipes Section -->
+        <section class="md:w-1/2 pl-0 md:pl-8 mt-8 md:mt-0 flex flex-col items-center" aria-labelledby="my-recipes">
+          <h2 id="my-recipes" class="text-2xl font-bold mb-4 text-center">My Recipes</h2>
+          <div class="grid grid-cols-3 gap-4 mb-4 px-2 w-full">
+            <img src="assets/images/food 9.jpg" class="rounded w-full aspect-square object-cover" />
+            <img src="assets/images/ food 10.jpg" class="rounded w-full aspect-square object-cover" />
+            <img src="assets/images/food 11.jpg" class="rounded w-full aspect-square object-cover" />
+            <img src="assets/images/food 12.jpg" class="rounded w-full aspect-square object-cover" />
+            <img src="assets/images/food 13.jpg" class="rounded w-full aspect-square object-cover" />
+            <img src="assets/images/Food 6.jpg" class="rounded w-full aspect-square object-cover" />
+            <img src="assets/images/Food 3.jpg" class="rounded w-full aspect-square object-cover" />
+            <img src="assets/images/food 8.jpg" class="rounded w-full aspect-square object-cover" />
+            <img src="assets/images/Food 4.jpg" class="rounded w-full aspect-square object-cover" />
+          </div>
+          <div class="flex justify-center">
+            <button class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-1 rounded text-sm">See more</button>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+  </div>
+</body>
+</html>

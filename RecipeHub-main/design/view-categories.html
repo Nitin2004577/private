@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RecipeHub - View Categories</title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="min-h-screen bg-[#1C2135] flex flex-col text-white">
+      <!-- Header / Navigation -->
+      <header>
+        <nav
+          class="flex justify-between items-center shadow shadow-gray-600 w-full py-2 px-4 md:px-8"
+          aria-label="Main navigation"
+        >
+          <div class="flex gap-4 items-center">
+            <button class="text-2xl cursor-pointer" aria-label="Toggle Sidebar">
+              =
+            </button>
+
+            <!-- Logo -->
+            <div>
+              <img
+                class="size-0 md:w-24 md:h-8"
+                src="assets/images/recipehub-white-text.png"
+                alt="RecipeHub logo"
+              />
+            </div>
+          </div>
+
+          <!-- Search bar -->
+          <div class="relative flex items-center md:w-[20rem] lg:w-[40rem]">
+            <input
+              class="bg-[#38485B] rounded-md text-sm px-2 py-2 outline-none w-full"
+              type="search"
+              placeholder="Search"
+              aria-label="Search Recipes"
+            />
+            <i
+              class="fa fa-search absolute right-3 top-3 text-sm text-gray-400"
+              aria-hidden="true"
+            ></i>
+          </div>
+
+          <!-- Profile image -->
+          <div class="size-[2rem] rounded-full cursor-pointer">
+            <img
+              class="size-[2rem] rounded-full object-center object-cover"
+              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages-wixmp-ed30a86b8c4ca887773594c2.wixmp.com%2Ff%2F3f01db52-f675-48dc-9c91-f245d99f1486%2Fd2nqynw-af694fd2-e1ba-4e9c-badb-630a48474599.jpg%2Fv1%2Ffill%2Fw_950%2Ch_633%2Cq_75%2Cstrp%2Frandom_person_by_vurtov_d2nqynw-fullview.jpg%3Ftoken%3DeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjMzIiwicGF0aCI6IlwvZlwvM2YwMWRiNTItZjY3NS00OGRjLTljOTEtZjI0NWQ5OWYxNDg2XC9kMm5xeW53LWFmNjk0ZmQyLWUxYmEtNGU5Yy1iYWRiLTYzMGE0ODQ3NDU5OS5qcGciLCJ3aWR0aCI6Ijw9OTUwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.c2w8ijUJquyo71KU-F_oxYiyQ7m5RjWAvFeMvkqFUwY&f=1&nofb=1&ipt=79d5c127ba92caf68a1c8e6bbd3ab9a2063f78d1e3d9d54248c13a454e8f51d2"
+              alt="Profile Photo"
+            />
+          </div>
+        </nav>
+      </header>
+
+      <!-- Main Content -->
+      <main class="p-4 md:px-12 lg:px-16">
+        <!-- Category Header -->
+        <section class="mt-8">
+          <h1
+            class="text-2xl font-semibold border-b-2 border-orange-500 pb-2 w-40 md:text-3xl lg:text-4xl"
+          >
+            Categories
+          </h1>
+          <p class="text-gray-400 mt-4">
+            <span class="text-xl text-white font-bold">7</span> categories
+            currently created.
+          </p>
+        </section>
+
+        <!-- Create & Search Actions -->
+        <section
+          class="flex justify-between mt-8 mb-8"
+          aria-label="Category Actions"
+        >
+          <button
+            class="bg-red-600 text-white font-semibold px-2 py-1 md:px-4 hover:bg-red-700 transition md:py-2 lg:px-6 lg:py-4 rounded-lg active:scale-95 active:bg-red-600/80"
+          >
+            Create
+          </button>
+
+          <div class="relative w-48 md:w-64 lg:w-96">
+            <input
+              type="text"
+              placeholder="Search Categories"
+              class="rounded-xl outline-none p-2 w-full placeholder:text-gray-600 text-sm text-black"
+              aria-label="Search Categories"
+            />
+            <i
+              class="fa fa-search absolute right-3 top-3 text-black text-sm"
+              aria-hidden="true"
+            ></i>
+          </div>
+        </section>
+
+        <!-- Categories Table -->
+        <section
+          class="overflow-x-auto md:overflow-hidden border-t border-gray-500"
+        >
+          <h2
+            class="text-gray-300 text-lg md:text-xl mt-2 md:mt-4 mb-2 md:mb-4 font-semibold"
+          >
+            Categories Data
+          </h2>
+          <table class="min-w-full border-collapse rounded-md">
+            <thead>
+              <tr class="text-sm bg-[#38485B]">
+                <th
+                  scope="col"
+                  class="px-4 py-2 border border-gray-600 whitespace-nowrap"
+                >
+                  Category Name
+                </th>
+                <th
+                  scope="col"
+                  class="px-4 py-2 border border-gray-600 whitespace-nowrap"
+                >
+                  Recipes Created
+                </th>
+                <th
+                  scope="col"
+                  class="px-4 py-2 border border-gray-600 whitespace-nowrap"
+                >
+                  Created On
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="hover:bg-[#35475c39] cursor-pointer">
+                <td class="px-4 py-2 border border-gray-600">Sea Food</td>
+                <td class="px-4 py-2 border border-gray-600">143</td>
+                <td class="px-4 py-2 border border-gray-600 whitespace-nowrap">
+                  2025-01-01
+                </td>
+              </tr>
+              <!-- Repeat rows as needed -->
+              <tr class="hover:bg-[#35475c39] cursor-pointer">
+                <td class="px-4 py-2 border border-gray-600">Sea Food</td>
+                <td class="px-4 py-2 border border-gray-600">143</td>
+                <td class="px-4 py-2 border border-gray-600 whitespace-nowrap">
+                  2025-01-01
+                </td>
+              </tr>
+              <tr class="hover:bg-[#35475c39] cursor-pointer">
+                <td class="px-4 py-2 border border-gray-600">Sea Food</td>
+                <td class="px-4 py-2 border border-gray-600">143</td>
+                <td class="px-4 py-2 border border-gray-600 whitespace-nowrap">
+                  2025-01-01
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

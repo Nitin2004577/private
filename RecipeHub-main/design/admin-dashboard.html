@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RecipeHub - Admin Dashboard</title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Tailwind CSS (via CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <!-- Body -->
+  <body>
+    <div class="min-h-screen bg-[#1C2135] text-white">
+      <!-- Header -->
+      <header class="w-full shadow shadow-gray-600 py-2 px-4 md:px-8">
+        <nav class="flex justify-between items-center">
+          <div class="flex gap-4 items-center">
+            <button class="text-2xl cursor-pointer" aria-label="Menu Toggle">
+              =
+            </button>
+
+            <!-- Logo -->
+            <div>
+              <img
+                class="hidden md:w-24 md:h-8"
+                src="/assets/images/recipehub-white-text.png"
+                alt="RecipeHub Logo"
+              />
+            </div>
+          </div>
+
+          <!-- Search Bar -->
+          <div class="relative flex items-center md:w-[20rem] lg:w-[40rem]">
+            <input
+              type="search"
+              class="bg-[#38485B] rounded-md text-sm px-2 py-2 outline-none w-full"
+              placeholder="Search"
+              aria-label="Search recipes"
+            />
+            <i
+              class="fa fa-search absolute right-3 top-3 text-sm text-gray-400"
+            ></i>
+          </div>
+
+          <!-- Profile Image -->
+          <div class="size-[2rem] rounded-full cursor-pointer">
+            <img
+              class="size-[2rem] rounded-full object-center object-cover"
+              src="https://tse1.mm.bing.net/th/id/OIP.3SEcIdFb4CafVurAVrO27wHaLH"
+              alt="Profile Photo"
+            />
+          </div>
+        </nav>
+      </header>
+
+      <!-- Main Content -->
+      <main class="py-4 px-2 md:px-8">
+        <!-- Welcome Section -->
+        <section class="flex gap-2 items-center md:mb-8">
+          <i class="fa fa-sun text-yellow-400"></i>
+          <div>
+            <p class="text-md md:text-lg">
+              Welcome
+              <br />
+              <span class="font-semibold text-2xl">John Doe</span>
+            </p>
+          </div>
+        </section>
+
+        <!-- Stats Cards -->
+        <section
+          class="flex justify-center gap-4 lg:gap-16 flex-wrap items-center py-3 md:mb-4"
+        >
+          <!-- Users -->
+          <article
+            class="bg-[#53AE3C] w-32 h-16 md:w-48 md:h-24 rounded-md relative p-4 cursor-pointer"
+          >
+            <h2 class="text-sm md:text-xl text-gray-300">Users</h2>
+            <p class="text-2xl md:text-3xl font-semibold text-gray-200">100</p>
+            <i class="fa fa-users absolute top-2 right-2"></i>
+          </article>
+
+          <!-- Recipes -->
+          <article
+            class="bg-[#227CE9] w-32 h-16 md:w-48 md:h-24 rounded-md relative p-4"
+          >
+            <h2 class="text-sm md:text-xl text-gray-300">Recipes</h2>
+            <p class="text-2xl md:text-3xl font-semibold text-gray-200">80</p>
+            <i class="fa fa-utensils absolute top-2 right-2"></i>
+          </article>
+
+          <!-- Categories -->
+          <article
+            class="bg-[#E24861] w-32 h-16 md:w-48 md:h-24 rounded-md relative p-4"
+          >
+            <h2 class="text-sm md:text-xl text-gray-300">Categories</h2>
+            <p class="text-2xl md:text-3xl font-semibold text-gray-200">10</p>
+            <i class="fa fa-tags absolute top-2 right-2"></i>
+          </article>
+
+          <!-- Comments -->
+          <article
+            class="bg-[#6E47A4] w-32 h-16 md:w-48 md:h-24 rounded-md relative p-4"
+          >
+            <h2 class="text-sm md:text-xl text-gray-300">Comments</h2>
+            <p class="text-2xl md:text-3xl font-semibold text-gray-200">150</p>
+            <i class="fa fa-comments absolute top-2 right-2"></i>
+          </article>
+        </section>
+
+        <!-- Table Section -->
+        <section
+          class="overflow-x-auto md:overflow-hidden border-t border-gray-500"
+        >
+          <h2 class="text-gray-300 text-lg md:text-xl mt-4 mb-4 font-semibold">
+            Recipes Data
+          </h2>
+          <table class="min-w-full border-collapse rounded-md">
+            <thead>
+              <tr class="text-sm bg-[#38485B]">
+                <th
+                  scope="col"
+                  class="px-4 py-2 border border-gray-600 whitespace-nowrap"
+                >
+                  Recipe Title
+                </th>
+                <th
+                  scope="col"
+                  class="px-4 py-2 border border-gray-600 whitespace-nowrap"
+                >
+                  Created By
+                </th>
+                <th
+                  scope="col"
+                  class="px-4 py-2 border border-gray-600 whitespace-nowrap"
+                >
+                  Category
+                </th>
+                <th
+                  scope="col"
+                  class="px-4 py-2 border border-gray-600 whitespace-nowrap"
+                >
+                  Created On
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Example Rows -->
+              <tr class="hover:bg-[#35475c39] cursor-pointer">
+                <td class="px-4 py-2 border border-gray-600">Fried Rice</td>
+                <td class="px-4 py-2 border border-gray-600">Anuj</td>
+                <td class="px-4 py-2 border border-gray-600">Asian</td>
+                <td class="px-4 py-2 border border-gray-600 whitespace-nowrap">
+                  2025-01-01
+                </td>
+              </tr>
+
+              <tr class="hover:bg-[#35475c39] cursor-pointer">
+                <td class="px-4 py-2 border border-gray-600">Fried Rice</td>
+                <td class="px-4 py-2 border border-gray-600">Anuj</td>
+                <td class="px-4 py-2 border border-gray-600">Asian</td>
+                <td class="px-4 py-2 border border-gray-600 whitespace-nowrap">
+                  2025-01-01
+                </td>
+              </tr>
+
+              <tr class="hover:bg-[#35475c39] cursor-pointer">
+                <td class="px-4 py-2 border border-gray-600">Fried Rice</td>
+                <td class="px-4 py-2 border border-gray-600">Anuj</td>
+                <td class="px-4 py-2 border border-gray-600">Asian</td>
+                <td class="px-4 py-2 border border-gray-600 whitespace-nowrap">
+                  2025-01-01
+                </td>
+              </tr>
+
+              <tr class="hover:bg-[#35475c39] cursor-pointer">
+                <td class="px-4 py-2 border border-gray-600">Fried Rice</td>
+                <td class="px-4 py-2 border border-gray-600">Anuj</td>
+                <td class="px-4 py-2 border border-gray-600">Asian</td>
+                <td class="px-4 py-2 border border-gray-600 whitespace-nowrap">
+                  2025-01-01
+                </td>
+              </tr>
+
+              <tr class="hover:bg-[#35475c39] cursor-pointer">
+                <td class="px-4 py-2 border border-gray-600">Fried Rice</td>
+                <td class="px-4 py-2 border border-gray-600">Anuj</td>
+                <td class="px-4 py-2 border border-gray-600">Asian</td>
+                <td class="px-4 py-2 border border-gray-600 whitespace-nowrap">
+                  2025-01-01
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

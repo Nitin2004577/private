@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RecipeHub – Anuj Sapkota Details</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="min-h-screen bg-[#1C2135] text-white">
+      <header
+        class="flex justify-between items-center shadow shadow-gray-600 w-full py-2 px-4 md:px-8"
+      >
+        <!-- Left: Menu icon & Logo -->
+        <div class="flex gap-4 items-center">
+          <button aria-label="Open Menu" class="text-2xl cursor-pointer">
+            =
+          </button>
+          <div>
+            <img
+              class="hidden md:block md:w-24 md:h-8"
+              src="assets/images/recipehub-white-text.png"
+              alt="RecipeHub Logo"
+            />
+          </div>
+        </div>
+
+        <!-- Center: Search bar -->
+        <form
+          class="relative flex items-center md:w-[20rem] lg:w-[40rem]"
+          role="search"
+          aria-label="Search Recipes"
+        >
+          <input
+            class="bg-[#38485B] rounded-md text-sm px-2 py-2 outline-none w-full"
+            type="search"
+            placeholder="Search"
+            aria-label="Search input"
+          />
+          <span class="absolute right-2 top-1" aria-hidden="true">*</span>
+        </form>
+
+        <!-- Right: Profile -->
+        <div class="size-[2rem] rounded-full cursor-pointer">
+          <img
+            class="size-[2rem] rounded-full object-center object-cover"
+            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages-wixmp-ed30a86b8c4ca887773594c2.wixmp.com%2Ff%2F3f01db52-f675-48dc-9c91-f245d99f1486%2Fd2nqynw-af694fd2-e1ba-4e9c-badb-630a48474599.jpg%2Fv1%2Ffill%2Fw_950%2Ch_633%2Cq_75%2Cstrp%2Frandom_person_by_vurtov_d2nqynw-fullview.jpg%3Ftoken%3DeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjMzIiwicGF0aCI6IlwvZlwvM2YwMWRiNTItZjY3NS00OGRjLTljOTEtZjI0NWQ5OWYxNDg2XC9kMm5xeW53LWFmNjk0ZmQyLWUxYmEtNGU5Yy1iYWRiLTYzMGE0ODQ3NDU5OS5qcGciLCJ3aWR0aCI6Ijw9OTUwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.c2w8ijUJquyo71KU-F_oxYiyQ7m5RjWAvFeMvkqFUwY&f=1&nofb=1&ipt=79d5c127ba92caf68a1c8e6bbd3ab9a2063f78d1e3d9d54248c13a454e8f51d2"
+            alt="User profile picture"
+          />
+        </div>
+      </header>
+
+      <main class="flex flex-col min-h-screen">
+        <!-- User Header Section -->
+        <section
+          aria-labelledby="profile-heading"
+          class="relative border-b border-gray-500 h-20 md:h-40 w-full"
+        >
+          <h1
+            id="profile-heading"
+            class="absolute bottom-2 md:bottom-4 text-xl md:text-3xl font-semibold ml-4 md:ml-8"
+          >
+            Anuj Sapkota
+          </h1>
+          <img
+            class="size-[5rem] md:size-[8rem] absolute right-4 -bottom-6 md:right-8 md:-bottom-10 rounded-full object-cover"
+            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%2Fid%2FOIP.YDyoIafIwW1tILED3HgZRQHaHa"
+            alt="Anuj Sapkota's profile photo"
+          />
+        </section>
+
+        <!-- Main Content: Comments & Recipes -->
+        <section class="md:flex md:justify-between md:px-8 md:mt-16 gap-6">
+          <!-- Comments -->
+          <section
+            aria-labelledby="comments-heading"
+            class="mt-16 md:mt-0 px-4 py-4 flex flex-col md:w-1/2 gap-4 border-b border-gray-700 border-r-2 shadow-[0_4px_20px_rgba(255,255,255,0.1)] rounded-xl"
+          >
+            <div class="flex gap-1 mb-2">
+              <h2 id="comments-heading" class="md:text-2xl">Comments</h2>
+              <div class="w-full h-1 mt-3 bg-gray-600"></div>
+            </div>
+
+            <!-- Individual Comment -->
+            <article
+              class="comment-entry hover:bg-[#35475c39] p-4 border border-gray-600 rounded-md flex justify-between items-center"
+            >
+              <div>
+                <h3 class="text-sm md:text-lg font-semibold">
+                  Commented on 12th July 2025
+                </h3>
+                <p class="text-xs md:text-base text-gray-300">
+                  This is the best food recipe I have ever made...
+                </p>
+              </div>
+              <button
+                class="hover:bg-gray-500 px-2 rounded-full"
+                aria-label="Options"
+              >
+                :
+              </button>
+            </article>
+
+            <button
+              class="text-sm mt-4 border-2 border-gray-700 p-2 rounded-md mx-auto w-20 hover:bg-gray-700"
+            >
+              See More
+            </button>
+          </section>
+
+          <!-- Created Recipes -->
+          <section
+            aria-labelledby="recipes-heading"
+            class="mt-4 md:mt-0 px-4 py-4 flex flex-col gap-4 md:w-1/2 shadow-[0_4px_20px_rgba(255,255,255,0.1)] rounded-xl"
+          >
+            <div class="flex gap-2 mb-2 whitespace-nowrap">
+              <h2 id="recipes-heading" class="md:text-2xl">Created Recipes</h2>
+              <div class="w-full h-1 mt-3 bg-gray-600"></div>
+            </div>
+
+            <!-- Recipe Card -->
+            <article
+              class="recipe-entry hover:bg-[#35475c39] p-4 border border-gray-600 rounded-md flex justify-between items-center"
+            >
+              <div>
+                <h3 class="text-sm md:text-lg font-semibold">
+                  French Fries
+                  <span class="border-l pl-2 ml-2 text-xs md:text-base"
+                    >13th July 2025</span
+                  >
+                </h3>
+                <p class="text-xs md:text-base text-gray-300">
+                  This is the best food recipe I have ever made...
+                </p>
+              </div>
+              <button
+                class="hover:bg-gray-500 px-2 rounded-full"
+                aria-label="Options"
+              >
+                :
+              </button>
+            </article>
+
+            <button
+              class="text-sm mt-4 border-2 border-gray-700 p-2 rounded-md mx-auto w-20 hover:bg-gray-700"
+            >
+              See More
+            </button>
+          </section>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
